@@ -1,34 +1,15 @@
 <template>
-    
-    <h1>REGISTRATION FORM</h1>
-    <div>
-    <a href="home_component.vue">home_component</a>&nbsp;&nbsp;
-    <a href="book_registration.vue">book_registration</a>&nbsp;&nbsp;
-    <a href="login_component.vue">login_component</a>&nbsp;&nbsp;
-    <a href="course_registration.vue">course_registration</a>&nbsp;&nbsp;
-    <a href="student_registration.vue">student_registration</a>&nbsp;&nbsp;
-</div>
+    <h1>vue framework registration form</h1>
+     
+    <a href="home.html">home</a>&nbsp; 
+    <a href="book_registration.html">book_registration</a>&nbsp;
+     <a href="login_component.html">login_component</a>&nbsp;
+      <a href="course_registration.html">course_registration</a>&nbsp; 
+    <a href="student_registration.html">student_registration</a>&nbsp;
 </template>
 <script>
 export default {
     name: 'home_component',
 } 
 </script>
-<style>
-div{
-    text-shadow: 2px 2px pink;
-    font-size: larger;
-    font-style: italic;
-    text-align: center;
-   
-    
-}
-h1{
-    text-decoration: double;
-    text-rendering: geometricPrecision;
-    text-size-adjust:45px ;
-    text-align: right;
-    background-color: black;
-}
-
-</style>
+<style></style>

@@ -1,15 +1,15 @@
 <template>
-
-
-    <h1>bookregistration</h1>
-        <form>
+     <h1>book registration</h1>
+    <form>
         
-            <label for="name">name</label>
+        <label for="username">username</label>
+        <input type="text"><br><br>
+        <label for="password">password</label>
+        <input type="password"><br><br>
+    
+    <label for="email">email</label>
     <input type="text"><br><br>
-    <label for="password">password</label>
-    <input type="text"><br><br>
-    <input tytpe="button" value="submit">
-        </form>
+    </form>
 </template>
 <script>
 export default {
