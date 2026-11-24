@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imboneza — Student Medical Management</title>
+  <meta name="description" content="Gucunga ubuzima bw'abanyeshuri mu mashuri y'isumbuye">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M12 7v10M7 12h10"/></svg>
+        </div>
+        <div>
+          <strong>Imboneza</strong>
+          <span>Medical System</span>
+        </div>
+      </div>
+
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+          <span>Incamake</span>
+        </button>
+        <button class="nav-item" data-view="students">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cx="9" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Abanyeshuri</span>
+        </button>
+        <button class="nav-item" data-view="records">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+          <span>Raporo z'ubuzima</span>
+        </button>
+        <button class="nav-item" data-view="doctors">
+          <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M12 7v10M7 12h10"/><path d="M15 2v4M9 2v4"/></svg>
+          <span>Abaganga</span>
+        </button>
+        <button class="nav-item" data-view="reports">
+          <svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 16l4-5 4 3 5-7"/></svg>
+          <span>Raporo za NESA</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="nav-item" id="settingsBtn">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06-1.91 1.91-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V20h-2.7v-.09A1.65 1.65 0 0 0 11 18.4a1.65 1.65 0 0 0-1.82.33l-.06.06-1.91-1.91.06-.06A1.65 1.65 0 0 0 7.6 15a1.65 1.65 0 0 0-1.51-1H6v-2.7h.09A1.65 1.65 0 0 0 7.6 10a1.65 1.65 0 0 0-.33-1.82l-.06-.06 1.91-1.91.06.06A1.65 1.65 0 0 0 11 6.6a1.65 1.65 0 0 0 1-1.51V5h2.7v.09A1.65 1.65 0 0 0 16 6.6a1.65 1.65 0 0 0 1.82-.33l.06-.06 1.91 1.91-.06.06A1.65 1.65 0 0 0 19.4 10a1.65 1.65 0 0 0 1.51 1H21v2.7h-.09A1.65 1.65 0 0 0 19.4 15Z"/></svg>
+          <span>Igenamiterere</span>
+        </button>
+        <div class="profile-mini">
+          <div class="avatar">MI</div>
+          <div><strong>Marie Imboneza</strong><span>Umwarimu</span></div>
+          <button class="icon-button" aria-label="More options">•••</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="breadcrumb"><span>Ibiro by'Ubuzima</span><b>/</b><strong>Incamake</strong></div>
+        <div class="top-actions">
+          <button class="icon-button notification-button" aria-label="Notifications">
+            <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+            <span class="notification-dot"></span>
+          </button>
+          <button class="role-button" id="roleButton"><span class="role-dot"></span><span id="roleLabel">Ubuyobozi</span><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+        </div>
+      </header>
+
+      <section class="dashboard" id="dashboardView">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">M'genzuzi na Kwezi</p>
+            <h1>Murakaza neza, Marie</h1>
+            <p>Iki ni igerageza ry'ubuzima bw'abanyeshuri uyu munsi.</p>
+          </div>
+          <button class="primary-button" id="uploadCertificate">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            Ohereza icyemezo
+          </button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon blue"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><span>Abanyeshuri bose</span><strong id="totalStudents">1,248</strong><small class="trend up">+4.2% <em>u kugera uku kwezi</em></small></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon green"><svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M12 7v10M7 12h10"/></svg></div>
+            <div><span>Ibipimo byemejwe</span><strong id="verifiedCases">86</strong><small class="trend up">+12 <em>muri iki cyumweru</em></small></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon amber"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <div><span>Bitegereje kwemezwa</span><strong id="pendingCases">14</strong><small class="trend neutral">Icyemezo cya muganga</small></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon red"><svg viewBox="0 0 24 24"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+            <div><span>Ingobyi z'ingenzi</span><strong id="urgentCases">3</strong><small class="trend urgent">Ukwitabwaho</small></div>
+          </article>
+        </div>
+
+        <div class="content-grid">
+          <article class="panel records-panel">
+            <div class="panel-header">
+              <div><h2>Ibyasuzumwe vuba</h2><p>Ubuvuzi n'ibyemezo bya muganga</p></div>
+              <button class="text-button" id="viewAllButton">Reba byose <span>→</span></button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Umunyeshuri</th><th>Ubwoko bw'uburwayi</th><th>Itariki</th><th>Uko bimeze</th><th></th></tr></thead>
+                <tbody id="recordsTable">
+                  <tr><td><div class="student"><div class="student-avatar purple">KM</div><div><strong>Kamanzi Marie</strong><span>S4 — A</span></div></div></td><td>Malariya</td><td>24 Nov, 2026</td><td><span class="status verified">Byemejwe</span></td><td><button class="row-menu" aria-label="Options">•••</button></td></tr>
+                  <tr><td><div class="student"><div class="student-avatar cyan">JN</div><div><strong>Jean Niyonzima</strong><span>S3 — B</span></div></div></td><td>Guhumeka</td><td>23 Nov, 2026</td><td><span class="status pending">Birategereje</span></td><td><button class="row-menu" aria-label="Options">•••</button></td></tr>
+                  <tr><td><div class="student"><div class="student-avatar rose">AC</div><div><strong>Aline Uwase</strong><span>S5 — C</span></div></div></td><td>Umuhaha</td><td>22 Nov, 2026</td><td><span class="status verified">Byemejwe</span></td><td><button class="row-menu" aria-label="Options">•••</button></td></tr>
+                  <tr><td><div class="student"><div class="student-avatar amber-avatar">PN</div><div><strong>Pacifique Niyom</strong><span>S2 — A</span></div></div></td><td>Umubiri wateye</td><td>21 Nov, 2026</td><td><span class="status urgent">Ntabwo byibuze</span></td><td><button class="row-menu" aria-label="Options">•••</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel overview-panel">
+            <div class="panel-header"><div><h2>Ibyashyizweho</h2><p>Ibyemezo mu cyumweru</p></div><button class="period-button">Icyumweru <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button></div>
+            <div class="donut-wrap">
+              <div class="donut" aria-label="86 percent verified">
+                <div class="donut-center"><strong>86%</strong><span>Byemejwe</span></div>
+              </div>
+            </div>
+            <div class="legend">
+              <div><span class="legend-dot green-dot"></span><p>Byemejwe</p><strong>86</strong></div>
+              <div><span class="legend-dot amber-dot"></span><p>Birategereje</p><strong>14</strong></div>
+              <div><span class="legend-dot red-dot"></span><p>Ingobyi</p><strong>3</strong></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="placeholder-view" id="placeholderView" hidden>
+        <div class="placeholder-card">
+          <div class="placeholder-icon" id="placeholderIcon"></div>
+          <h1 id="placeholderTitle"></h1>
+          <p id="placeholderText"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="certificateModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header"><div><p class="eyebrow">Icyemezo cya muganga</p><h2 id="modalTitle">Ohereza icyemezo</h2></div><button class="modal-close" id="closeModal" aria-label="Close">×</button></div>
+      <form id="certificateForm">
+        <div class="form-grid">
+          <label>Amazina yu munyeshuri<input type="text" id="studentName" placeholder="Urugero: Kamanzi Marie" required></label>
+          <label>Icyiciro<select id="studentClass"><option>S1 — A</option><option>S2 — A</option><option>S3 — B</option><option>S4 — A</option><option>S5 — C</option><option>S6 — A</option></select></label>
+        </div>
+        <label>Ubwoko bw'uburwayi<input type="text" id="illness" placeholder="Urugero: Malariya" required></label>
+        <label>Icyemezo cya muganga<span class="file-drop" id="fileDrop"><input type="file" id="certificateFile" accept="image/*,.pdf" required><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg><strong id="fileLabel">Fungura cyangwa ushushanye dosiye</strong><small>PNG, JPG cyangwa PDF — 10MB max</small></span></label>
+        <div class="modal-actions"><button type="button" class="secondary-button" id="cancelModal">Hagarika</button><button type="submit" class="primary-button">Ohereza icyemezo</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"><span>✓</span><div><strong>Icyemezo cyoherejwe</strong><p>Kizemezwa n'umuganga.</p></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
